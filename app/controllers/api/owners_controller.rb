@@ -1,4 +1,9 @@
 class Api::OwnersController < Api::BaseController
+  def show
+    @owner = Owner.find_by(name: params[:owner_name])
+    render json: @owner
+  end
+
   def show_with_articles
     @owner = Owner.includes(:articles).find_by(name: params[:owner_name])
     render json: @owner, serializer: OwnerWithArticlesSerializer

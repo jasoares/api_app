@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :owners, only: [:index]
     resources :articles, only: [:show]
     get '/:owner_name/articles' => 'owners#show_with_articles'
+    get '/:owner_name' => 'owners#show'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
