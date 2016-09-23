@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   scope :module => 'api', constraints: Subdomain['api'], defaults: { format: :json } do
+    resources :owners, only: [:index]
     resources :articles, only: [:show]
     get '/:owner_name/articles' => 'owners#show_with_articles'
   end
