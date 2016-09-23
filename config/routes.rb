@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  scope :module => 'api', constraints: Subdomain['api'], defaults: { format: :json } do
+    get '/:owner_name/articles' => 'owners#show_with_articles'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
