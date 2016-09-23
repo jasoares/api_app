@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160923060317) do
   add_index "articles", ["owner_id"], name: "index_articles_on_owner_id", using: :btree
 
   create_table "owners", force: :cascade do |t|
-    t.string   "owner_name"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

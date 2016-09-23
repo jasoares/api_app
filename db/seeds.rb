@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-matz = Owner.create(owner_name: 'matz')
-yukihiro = Owner.create(owner_name: 'yukihiro')
+matz = Owner.create(name: 'matz')
+yukihiro = Owner.create(name: 'yukihiro')
 
 Article.create(
   owner: matz,
